@@ -1,0 +1,37 @@
+test_anagram (__main__.TestExercice) ... FAIL
+test_doubles (__main__.TestExercice) ... ok
+test_frequence (__main__.TestExercice) ... ERROR
+test_grades (__main__.TestExercice) ... ok
+test_order (__main__.TestExercice) ... ok
+
+======================================================================
+ERROR: test_frequence (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 77, in test_frequence
+    output = [exercice.frequence(s) for s in sentences]
+  File "test_exercice.py", line 77, in <listcomp>
+    output = [exercice.frequence(s) for s in sentences]
+  File "/home/runner/work/2021h-ch6-1-exercices-omymo/2021h-ch6-1-exercices-omymo/exercice.py", line 56, in frequence
+    sorted_keys = sorted(frequency, reverse=True, key=frequency.__getitem__)
+UnboundLocalError: local variable 'frequency' referenced before assignment
+
+======================================================================
+FAIL: test_anagram (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 40, in test_anagram
+    'Erreur dans la vérification de l\'anagramme'
+AssertionError: Lists differ: [False, False] != [True, False]
+
+First differing element 0:
+False
+True
+
+- [False, False]
++ [True, False] : Erreur dans la vérification de l'anagramme
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=1, errors=1)
